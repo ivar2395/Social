@@ -25,7 +25,7 @@ import moment from 'moment';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 
-const PostCard = ({item}) => {
+const PostCard = ({item, onDelete}) => {
   const {user, logout} = useContext(AuthContext);
   const [userData, setUserData] = useState(null);
 
@@ -51,14 +51,14 @@ const PostCard = ({item}) => {
   return (
     <Card>
       <UserInfo>
-        <UserImg source={item.userImg } />
+        <UserImg source={{uri: item.userImg} } />
         <UserInfoText>
             <UserName>{item.userName}</UserName>
-            <PostTime>{item.postTime}</PostTime>
+            <PostTime>{moment(item.postTime.toDate()).fromNow()}</PostTime>    
         </UserInfoText>
       </UserInfo>
       <PostText>{item.post}</PostText>
-      {item.postImg != 'none' ? <PostImg source={item.postImg} /> : <Divider />}
+      {item.postImg != null ? <PostImg source={{uri: item.postImg}} /> : <Divider />}
       
 
       <InteractionWrapper>
@@ -70,9 +70,16 @@ const PostCard = ({item}) => {
           <Ionicons name="md-chatbubble-outline" size={25} color='#333'/>
           <InteractionText>{commentText}</InteractionText>
         </Interaction>
+        {user.uid == item.userId ?
+        <Interaction onPress= {() => onDelete(item.id)}>
+          <Ionicons name="md-trash-bin" size={25} color='#333'/>
+        </Interaction>
+        : null}
       </InteractionWrapper>
     </Card>
   );
 };
 
 export default PostCard;
+
+////{moment(item.postTime.toDate()).fromNow()}

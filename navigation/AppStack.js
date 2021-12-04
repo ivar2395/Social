@@ -26,7 +26,7 @@ const FeedStack = ({navigation}) => (
         headerTitleStyle: {
           color: '#2e64e5',
           fontFamily: 'Kufam-SemiBoldItalic',
-          fontSize: 18,
+          fontSize: 22,
         },
         headerStyle: {
           shadowColor: '#fff',
@@ -122,6 +122,7 @@ const AppStack = () => {
   return (
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         "tabBarActiveTintColor": "#2e64e5",
         "tabBarStyle": [
           {
@@ -134,6 +135,7 @@ const AppStack = () => {
         name="Home"
         component={FeedStack}
         options={({route}) => ({
+          title: '',
           tabBarLabel: 'Home',
           //tabBarVisible: false,
           tabBarIcon: ({color, size}) => (

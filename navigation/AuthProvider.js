@@ -23,7 +23,9 @@ export const AuthProvider = ({children}) => {
                     try{
                         const { idToken } = await GoogleSignin.signIn();
                         const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-                        await auth().signInWithCredential(googleCredential)
+                        await auth().signInWithCredential(googleCredential).catch(error => {
+                            console.log('Something went wrong with sign up: ', error);
+                        });
                     }catch(e){
                         console.log(e);
                     }

@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.View`
   flex: 1;
-  align-items: center;
   background-color: #fff;
   padding: 20px;
 `;
 
 export const Card = styled.View`
-    background-color: #EAE9E9;
+    background-color: #f8f8f8;
     width: 100%;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -30,13 +29,14 @@ export const UserInfoText = styled.View`
     flex-direction: column;
     justify-content: center;
     margin-left: 10px;
+    color: #000;
 `;
 
 export const UserName = styled.Text`
     font-size: 14px;
     font-weight: bold;
     font-family: 'Lato-Regular';
-    color: #666;
+    color: #000;
 `;
 
 export const PostTime = styled.Text`
@@ -51,7 +51,7 @@ export const PostText = styled.Text`
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
-    color: #666;
+    color: #000;
 `;
 
 export const PostImg = styled.Image`
