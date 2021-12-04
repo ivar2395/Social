@@ -3,7 +3,7 @@ import { View, Text, Button, Image, TouchableOpacity, StyleSheet} from 'react-na
 
 import Onboarding from 'react-native-onboarding-swiper';
 
-const Dots = ({selected}) => (
+const Dots = ({selected}) => {
   let backgroundColor;
 
   backgroundColor = selected ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)';
@@ -19,7 +19,7 @@ const Dots = ({selected}) => (
     />
   );
 
-);
+};
 
 const Skip = ({...props}) => (
     <TouchableOpacity
@@ -39,7 +39,7 @@ const Next = ({...props}) => (
     </TouchableOpacity>
 );
 
-const Done = {(...props)} => (
+const Done = ({...props}) => (
   <TouchableOpacity
     style={{marginHorizontal:10}}
     {...props}
@@ -72,7 +72,7 @@ const OnboardingScreen = ({navigation}) => {
       subtitle: 'Share your thoughts with similar kind of people',
     },
     {
-      backgroundColor: '#e9cbe',
+      backgroundColor: '#e9bcbe',
       image: <Image source={require('../assets/onboarding-img3.png')} />,
       title: 'Become the Star',
       subtitle: 'Let the Spot Light capture you!',
