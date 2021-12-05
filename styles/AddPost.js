@@ -11,10 +11,11 @@ export const InputWrapper = styled.View`
 export const InputField = styled.TextInput`
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     width:90%;
     margin-bottom: 15px;
+    color: #2e64e5;
 `;
 
 export const AddImage = styled.Image`

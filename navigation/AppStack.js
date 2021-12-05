@@ -126,7 +126,9 @@ const AppStack = () => {
         "tabBarActiveTintColor": "#2e64e5",
         "tabBarStyle": [
           {
-            "display": "flex"
+            display: "flex",
+            height: 55,
+            paddingBottom: 8,
           },
           null
         ]

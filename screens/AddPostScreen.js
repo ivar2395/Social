@@ -124,6 +124,7 @@ const AddPostScreen = () => {
                 {image != null ? <AddImage source={{uri : image}} /> : null }
                     <InputField
                         placeholder= "What's on your mind?"
+                        placeholderTextColor="#555656" 
                         multiline
                         numberOfLines = {4}
                         onChangeText= {(content) => setpost(content)}

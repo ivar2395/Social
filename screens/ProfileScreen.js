@@ -46,7 +46,7 @@ const ProfileScreen = ({navigation, route}) => {
             list.push({
               id: doc.id,
               userId,
-              userName: 'Test Name',
+              userName: 'John Doe',
               userImg:
                 'https://lh5.googleusercontent.com/-b0PKyNuQv5s/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclxAM4M1SCBGAO7Rp-QP6zgBEUkOQ/s96-c/photo.jpg',
               postTime: postTime,
@@ -174,6 +174,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 10,
     marginBottom: 10,
+    color: '#000',
   },
   aboutUser: {
     fontSize: 12,
